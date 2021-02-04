@@ -75,4 +75,11 @@ var finalTabs = socialWindow
   .join(workWindow.tabClose(1).tabOpen());
 console.log(finalTabs.tabs);
 
+// Avoid mutations and side effects using functional programming
+var fixedValue = 4;
+
+function incrementer () {
+  return fixedValue + 1; //By using + 1 instead of ++ it doesn't change the original value
+}
+
 //
