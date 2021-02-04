@@ -265,4 +265,12 @@ function checkPositive(arr) {
 }
 checkPositive([1, 2, 3, -4, 5]);
 
-//
+// Introduction to currying and partial application
+function add(x) {
+  return function(y) {
+    return function(z) {
+      return x + y + z;
+    };
+  };
+}
+add(10)(20)(30);
