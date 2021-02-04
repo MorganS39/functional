@@ -198,3 +198,15 @@ function getRating(watchList) {
   return averageRating;
 }
 console.log(getRating(watchList));
+
+// Use higher-order functions map, filter, or reduce to solve complex problems
+const squareList = arr => {
+  return arr
+      .filter(number => number > 0 && number % parseInt(number) === 0)
+      .map(number => Math.pow(number, 2));
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
+
+//
