@@ -250,3 +250,11 @@ function urlSlug(title) {
 }
 
 // Use the every method to check that every element in an array meets a criteria
+function checkPositive(arr) {
+  return arr.every(function(arr) {
+    return arr > 0;
+  })
+}
+checkPositive([1, 2, 3, -4, 5]);
+
+// Use the some method to check that any elements in an array meet a criteria
