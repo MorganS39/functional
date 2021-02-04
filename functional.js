@@ -188,4 +188,13 @@ var first = [1, 2, 3];
 var second = [4, 5];
 nonMutatingPush(first, second);
 
-//
+// Use the reduce method to analyze data
+function getRating(watchList) {
+  var averageRating = watchList
+    .filter(movie => movie.Director === "Christopher Nolan")
+    .map(movie => parseFloat(movie.imdbRating))
+    .reduce((sumOfRatings, rating) => sumOfRatings + rating) / 
+    watchList.filter(film => film.Director === "Christopher Nolan").length;
+  return averageRating;
+}
+console.log(getRating(watchList));
