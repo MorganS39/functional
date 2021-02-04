@@ -232,10 +232,21 @@ function splitify(str) {
 }
 splitify("Hello World,I-am code");
 
-// Combine an array into a string using hte join method
+// Combine an array into a string using the join method
 function sentensify(str) {
   return str.split(/\W/).join(" ");
 }
 sentensify("May-the-force-be-with-you");
 
-//
+// Apply functional programming to convert strings into URL slugs
+function urlSlug(title) {
+    return title
+        .split(/\W/)
+        .filter(obj => {
+            return obj !== "";
+    })
+        .join("-")
+        .toLowerCase();
+}
+
+// Use the every method to check that every element in an array meets a criteria
