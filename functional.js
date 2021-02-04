@@ -217,4 +217,13 @@ function alphabeticalOrder(arr) {
 }
 alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
 
+// Return a sorted array without changing the original array
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  return [].concat(arr).sort(function(a, b) {
+    return a - b;
+  });
+}
+nonMutatingSort(globalArray);
+
 //
