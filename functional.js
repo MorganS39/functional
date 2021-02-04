@@ -159,3 +159,10 @@ var new_s = s.myFilter(function(item) {
 });
 
 // Return part of an array using the slice method
+function sliceArray(anim, beginSlice, endSlice) {
+  return anim.slice(beginSlice, endSlice);
+}
+var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+
+// Remove elements from an array using slice instead of splice
