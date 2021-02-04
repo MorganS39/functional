@@ -89,4 +89,21 @@ function incrementer (fixedValue) {
   return fixedValue + 1; 
 }
 
-//
+// Refactor global variables out of functions
+var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+function add(newList, bookName) {
+  return [...newList, bookName];
+}
+
+function remove (newList, bookName) {
+  return newList.filter(book => book !== bookName);
+}
+
+var newBookList = add(bookList, 'A Brief History of Time');
+var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
+var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+
+console.log(bookList);
+
+// Use the map method to extract data from an array
