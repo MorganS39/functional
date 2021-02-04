@@ -82,4 +82,11 @@ function incrementer () {
   return fixedValue + 1; //By using + 1 instead of ++ it doesn't change the original value
 }
 
+// Pass arguments to avoid external dependence in a function
+var fixedValue = 4;
+
+function incrementer (fixedValue) {
+  return fixedValue + 1; 
+}
+
 //
