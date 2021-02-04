@@ -166,3 +166,10 @@ var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
 sliceArray(inputAnim, 1, 3);
 
 // Remove elements from an array using slice instead of splice
+function nonMutatingSplice(cities) {
+  return cities.slice(0, 3); // slice(0, 3) copies first 3 instead of removing last ones
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
+
+// Combine two arrays using the concat method
