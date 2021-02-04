@@ -131,3 +131,14 @@ var new_s = s.myMap(function(item) {
 });
 
 // Use the filter method to extract data from an array
+var filteredList = watchList.map(item => {
+  return {
+    title: item.Title,
+    rating: item.imdbRating
+  };
+})
+.filter(item => {
+  return parseFloat(item.rating) >= 8.0; 
+});
+
+// 
