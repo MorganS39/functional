@@ -226,4 +226,10 @@ function nonMutatingSort(arr) {
 }
 nonMutatingSort(globalArray);
 
+// Split a string into an array using the split method
+function splitify(str) {
+  return str.split(/\W/);
+}
+splitify("Hello World,I-am code");
+
 //
