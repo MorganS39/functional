@@ -232,4 +232,10 @@ function splitify(str) {
 }
 splitify("Hello World,I-am code");
 
+// Combine an array into a string using hte join method
+function sentensify(str) {
+  return str.split(/\W/).join(" ");
+}
+sentensify("May-the-force-be-with-you");
+
 //
