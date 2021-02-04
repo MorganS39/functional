@@ -107,3 +107,14 @@ var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The El
 console.log(bookList);
 
 // Use the map method to extract data from an array
+var ratings = [];
+for(var i=0; i < watchList.length; i++){
+  ratings.push({title: watchList[i]["Title"],  rating: watchList[i]["imdbRating"]});
+}
+// Can turn into this using map function
+const ratings = watchList.map(item => ({
+  title: item["Title"],
+  rating: item["imdbRating"]
+}));
+
+// Implement map on a prototype
