@@ -258,3 +258,11 @@ function checkPositive(arr) {
 checkPositive([1, 2, 3, -4, 5]);
 
 // Use the some method to check that any elements in an array meet a criteria
+function checkPositive(arr) {
+  return arr.some(function(arr) {
+    return arr > 0;
+  })
+}
+checkPositive([1, 2, 3, -4, 5]);
+
+//
